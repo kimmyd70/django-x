@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.generic.views import (
+from django.views.generic import (
     ListView, 
     DetailView, 
     DeleteView, 
@@ -12,27 +12,27 @@ from .models import Pattern
 # CRUD
 
 class PatternCreateView(CreateView):
-    template_name = 'patterns/pattern-create.html'
+    template_name = 'pattern-create.html'
     model = Pattern
     fields = []
 
 class PatternListView(ListView):
-    template_name = 'patterns/pattern-list.html'
+    template_name = 'pattern-list.html'
     model = Pattern
     
 class PatternDetailView(DetailView):
-    template_name = 'patterns/pattern-detail.html'
+    template_name = 'pattern-detail.html'
     model = Pattern
     
 class PatternUpdateView(UpdateView):
-    template_name = 'patterns/pattern-update.html'
+    template_name = 'pattern-update.html'
     model = Pattern
     fields = []
     
 class PatternDeleteView(DeleteView):
-    template_name = 'patterns/pattern-delete.html'
+    template_name = 'pattern-delete.html'
     model = Pattern
-    success_url = reverse_lazy("snack_list")
+    success_url = reverse_lazy("pattern_list")
     
 
 

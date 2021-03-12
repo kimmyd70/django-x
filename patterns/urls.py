@@ -1,11 +1,11 @@
 from django.urls import path
-from .views import ListView, DetailView
+from .views import PatternListView, PatternDetailView, PatternCreateView, PatternUpdateView, PatternDeleteView
 
 urlpatterns = [
-    path('', ListView.as_view(), name = 'pattern_list')
-    path('<int:pk>/', DetailView.as_view(), name = 'pattern_detail')
-    path('create/', CreateView.as_view(), name = 'pattern_create')
-    path('<int:pk>/update', UpdateView.as_view(), name = 'pattern_update')
-    path('<int:pk>/delete', DeleteView.as_view(), name = 'pattern_delete')
+    path('', PatternListView.as_view(), name = 'pattern_list'),
+    path('<int:pk>/', PatternDetailView.as_view(), name = 'pattern_detail'),
+    path('create/', PatternCreateView.as_view(), name = 'pattern_create'),
+    path('<int:pk>/update', PatternUpdateView.as_view(), name = 'pattern_update'),
+    path('<int:pk>/delete', PatternDeleteView.as_view(), name = 'pattern_delete'),
 
 ]
