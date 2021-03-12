@@ -1,6 +1,12 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.generic.views import ListView, DetailView, DeleteView, CreateView, UpdateView
+from django.generic.views import (
+    ListView, 
+    DetailView, 
+    DeleteView, 
+    CreateView, 
+    UpdateView,
+)   
 
 from .models import Pattern
 # CRUD
