@@ -1,4 +1,5 @@
 from django.urls import path
+# from patterns.models import Pattern
 from .views import PatternListView, PatternDetailView, PatternCreateView, PatternUpdateView, PatternDeleteView
 
 urlpatterns = [
@@ -7,5 +8,4 @@ urlpatterns = [
     path('create/', PatternCreateView.as_view(), name = 'pattern_create'),
     path('<int:pk>/update', PatternUpdateView.as_view(), name = 'pattern_update'),
     path('<int:pk>/delete', PatternDeleteView.as_view(), name = 'pattern_delete'),
-
 ]
