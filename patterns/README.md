@@ -41,3 +41,7 @@ __________________
 
 Optional for the lab, but try to get a CSS page wired up and working with minimal styling
 Images of each pattern would be useful
+
+## Collaboration
+
+Help on templates from Ashley Casimir

@@ -1,5 +1,10 @@
 {% extends '_base.html' %}
 
 {% block content %}
-<h2>Pattern Delete Coming Soon</h2>
+<h2>Delete a Pattern</h2>
+<form action = "" method = "POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type = "submit" value = "DELETE">
+</form>
 {% endblock content %}

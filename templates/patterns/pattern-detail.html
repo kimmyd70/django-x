@@ -1,5 +1,12 @@
 {% extends '_base.html' %}
 
 {% block content %}
-<h2>Pattern Detail Coming Soon</h2>
+<h2>{{ pattern.name }} Pattern</h2>
+    <h3> Category: {{ pattern.category }}</h3>
+    <p>{{ pattern.description }}</p>
+    <p></p>
+    <p>More info: {{ pattern.more_info }}</p>
+    <h4>Added By: {{ pattern.added_by }}</h4>
+    <a href="{% url 'pattern_update' pattern.pk %}">+ Update Pattern</a>
+    <a href="{% url 'pattern_delete' pattern.pk %}">+ Delete Pattern</a>
 {% endblock content %}
