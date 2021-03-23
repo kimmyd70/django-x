@@ -1,5 +1,14 @@
 {% extends '_base.html' %}
 
 {% block content %}
-<h2>Pattern List Coming Soon</h2>
+<h1>Pattern List</h1>
+    <a href="{% url 'pattern_create' %}">+ New Pattern</a>
+    <ul>
+        {% for pattern in object_list %}
+        <li>
+            <a href="{% url 'pattern_detail' pattern.pk %}">{{ pattern.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
 {% endblock content %}
+
